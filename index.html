@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Étoile et Gourmandises - Pâtisserie artisanale à Vitrolles</title>
+    <meta name="description" content="Découvrez les délicieuses créations d'Étoile et Gourmandises, votre pâtisserie artisanale à Vitrolles. Gâteaux, tartes et viennoiseries faits maison avec passion.">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.min.css" media="print" onload="this.media='all'">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Étoile et Gourmandises</h1>
+            <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-menu">
+                <span class="sr-only">Menu</span>
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav id="mobile-menu" aria-label="Navigation principale">
+                <div class="menu-section">
+                    <ul>
+                        <li><a href="#accueil">Accueil</a></li>
+						<li><a href="#a-propos">À propos</a></li>
+                        <li><a href="#produits">Nos Délices</a></li>
+						<li><a href="#commande">Commander</a></li>
+                    </ul>
+                </div>
+                <div class="menu-section social-links">
+                    <a href="https://www.facebook.com/people/Etoile-et-gourmandise/100095491869924/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/etoileetgourmandise" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@etoilegourmandise13" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+					<a href="https://www.linkedin.com/in/estelle-vuoso-b1a58b291?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <div class="menu-section">
+                    <a href="#contact" class="contact-button">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="accueil" class="hero" aria-labelledby="hero-title">
+            <div class="hero-content">
+                <h2 id="hero-title">L'art de la pâtisserie à votre table</h2>
+                <p>Des créations uniques pour enchanter vos papilles</p>
+            </div>
+        </section>
+		
+		<section id="a-propos" class="container" aria-labelledby="a-propos-title">
+            <h2 id="a-propos-title">À propos</h2>
+            <div class="a-propos-content">
+				<div class="a-propos-image">
+					<img src="img/estelle.jpg" alt="Photo de la propriétaire d'Étoile et Gourmandises" class="profile-pic">
+				</div>
+				<div class="a-propos-text">
+					<p>Je suis ravie de vous présenter mon travail sous un nouveau format, alliant professionnalisme et créativité.</p>
+					<p>En tant que traiteur en pâtisserie, je vous propose une large gamme de créations : des classiques revisités aux innovations gourmandes. De la guimauve artisanale aux entremets sophistiqués, en passant par des muffins moelleux et des tartes savoureuses, mon offre s'étend du sucré au salé.</p>
+					<p>Ma philosophie ? Allier finesse et gourmandise, légèreté et caractère. Chaque création est pensée comme une rencontre harmonieuse de saveurs, où la délicatesse s'unit à l'audace gustative.</p>
+					<p>Ce qui me distingue ? Ma capacité à adapter mes pâtisseries selon vos goûts et vos envies. Que vous ayez une idée précise ou que vous cherchiez des suggestions, je m'engage à réaliser des créations sur-mesure qui répondront parfaitement à vos attentes.</p>
+					<p>Découvrez un univers pâtissier où passion, expertise et personnalisation se conjuguent pour éveiller vos papilles et créer des moments de pur plaisir gustatif.</p>
+				</div>
+			</div>
+        </section>
+
+        <section id="produits" class="container" aria-labelledby="produits-title">
+            <h2 id="produits-title">Nos Délices</h2>
+            <div class="products">
+                <div class="product">
+                    <img src="img/muffin.jpg" 
+                         srcset="img/muffin-300.jpg 300w, img/muffin-600.jpg 600w"
+                         sizes="(max-width: 768px) 100vw, 33vw"
+                         alt="Muffin Abricot et Thym">
+                    <h3>Muffin Abricot et Thym</h3>
+                    <p>Savourez nos délicieux muffins à l'abricot et au thym, une parfaite harmonie entre la douceur de l'abricot caramélisé et les notes aromatiques du thym. Chaque bouchée est un véritable délice, garnie d'amandes croquantes pour une touche de gourmandise supplémentaire.</p>
+                </div>
+                <div class="product">
+                    <img src="img/fraisier.jpg" 
+                         srcset="img/fraisier.jpg 300w, img/fraisier.jpg 600w"
+                         sizes="(max-width: 768px) 100vw, 33vw"
+                         alt="Fraisier">
+                    <h3>Fraisier</h3>
+                    <p>Un classique revisité avec passion</p>
+                </div>
+                <div class="product">
+                    <img src="/api/placeholder/300/200" 
+                         srcset="/api/placeholder/300/200 300w, /api/placeholder/600/400 600w"
+                         sizes="(max-width: 768px) 100vw, 33vw"
+                         alt="Mille-feuille">
+                    <h3>Mille-feuille</h3>
+                    <p>Croustillant et fondant à la fois</p>
+                </div>
+            </div>
+			<div class="instagram-button-container">
+				<a href="https://www.instagram.com/etoileetgourmandise" target="_blank" rel="noopener noreferrer" class="instagram-link">Suivez-nous sur Instagram pour plus de créations gourmandes</a>
+			</div>
+        </section>
+		
+		<section id="commande" class="container" aria-labelledby="commande-title">
+			<h2 id="commande-title">Passer une commande</h2>
+			<form id="orderForm" action="https://formspree.io/f/votre_id_formspree" method="POST">
+				<div class="form-group">
+					<label for="customerName">Nom :</label>
+					<input type="text" id="customerName" name="customerName" required>
+				</div>
+				<div class="form-group">
+					<label for="customerEmail">Email :</label>
+					<input type="email" id="customerEmail" name="customerEmail" required>
+				</div>
+				<div class="form-group">
+					<label for="orderDetails">Détails de la commande :</label>
+					<textarea id="orderDetails" name="orderDetails" required></textarea>
+				</div>
+				<div class="form-group">
+					<label for="deliveryDate">Date de livraison souhaitée :</label>
+					<input type="date" id="deliveryDate" name="deliveryDate" required>
+				</div>
+				<button type="submit">Envoyer la commande</button>
+			</form>
+			<div id="orderStatus" style="display: none;"></div>
+		</section>
+
+        <section id="contact" class="container" aria-labelledby="contact-title">
+			<h2 id="contact-title">Contactez-nous</h2>
+			<div class="contact-wrapper">
+				<div class="contact-form">
+					<form id="contactForm" action="https://formspree.io/f/mqazkyeo" method="POST">
+						<div class="form-group">
+							<label for="name">Nom :</label>
+							<input type="text" id="name" name="name" required>
+						</div>
+						<div class="form-group">
+							<label for="email">Email :</label>
+							<input type="email" id="email" name="email" required>
+						</div>
+						<div class="form-group">
+							<label for="message">Message :</label>
+							<textarea id="message" name="message" required></textarea>
+						</div>
+						<button type="submit">Envoyer</button>
+					</form>
+					<div id="formStatus" style="display: none;"></div>
+				</div>
+				<div class="contact-map">
+					<div id="map" style="height: 400px;"></div>
+				</div>
+			</div>
+		</section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Étoile et Gourmandises. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+	<script src="script.js"></script>
+</body>
+</html>
